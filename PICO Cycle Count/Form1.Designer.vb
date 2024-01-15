@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.btnGenerate = New Guna.UI2.WinForms.Guna2Button()
         Me.btnClear = New Guna.UI2.WinForms.Guna2Button()
@@ -40,6 +41,7 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.Guna2CustomGradientPanel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -282,7 +284,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(732, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(732, 30)
         Me.MenuStrip1.TabIndex = 20
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -300,6 +302,11 @@ Partial Class Form1
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
         Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(140, 26)
         Me.ReportToolStripMenuItem.Text = "Report"
+        '
+        'SerialPort1
+        '
+        Me.SerialPort1.BaudRate = 4800
+        Me.SerialPort1.PortName = "COM7"
         '
         'Form1
         '
@@ -343,4 +350,5 @@ Partial Class Form1
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents MenuToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SerialPort1 As IO.Ports.SerialPort
 End Class

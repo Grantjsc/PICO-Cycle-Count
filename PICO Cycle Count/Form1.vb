@@ -24,7 +24,11 @@ Public Class Form1
 
         txtSpool.Visible = False
         Label5.Visible = False
+
+        SerialPort1.Open()
     End Sub
+
+    'I:\Dept_Tech_Support\LF Software\LF Database
 
     Public Sub Get_db()
         Dim con As OleDbConnection = New OleDbConnection
@@ -54,7 +58,7 @@ Public Class Form1
                 Console.WriteLine(WTperSpool)
                 Console.WriteLine(Multiplier)
                 txtWeight.Focus()
-                If lblMaterialType.Text = "Axial Tape" Then
+                If WTperSpool > 0 Then
                     txtSpool.Visible = True
                     Label5.Visible = True
                 End If
@@ -253,7 +257,7 @@ Public Class Form1
             MsgBox("Please enter weight!", MessageBoxIcon.Error)
             txtWeight.Focus()
         Else
-            If lblMaterialType.Text = "Axial Tape" Then
+            If WTperSpool > 0 Then
                 If txtSpool.Text = "" Then
                     MsgBox("Please enter number of spool!", MessageBoxIcon.Error)
                     txtSpool.Focus()
@@ -789,5 +793,10 @@ Public Class Form1
             End If
             'End If
         End If
+    End Sub
+
+    Private Sub SerialPort1_DataReceived(sender As Object, e As IO.Ports.SerialDataReceivedEventArgs) Handles SerialPort1.DataReceived
+        Console.WriteLine(SerialPort1.ReadLine)
+        'txtWeight.Text = SerialPort1.ReadLine
     End Sub
 End Class
