@@ -25,7 +25,7 @@ Public Class Form1
         txtSpool.Visible = False
         Label5.Visible = False
 
-        SerialPort1.Open()
+        'SerialPort1.Open()
     End Sub
 
     'I:\Dept_Tech_Support\LF Software\LF Database
@@ -796,7 +796,7 @@ Public Class Form1
     End Sub
 
     Private Sub SerialPort1_DataReceived(sender As Object, e As IO.Ports.SerialDataReceivedEventArgs) Handles SerialPort1.DataReceived
-        Console.WriteLine(SerialPort1.ReadLine)
+        'Console.WriteLine(SerialPort1.ReadLine)
         'txtWeight.Text = SerialPort1.ReadLine
     End Sub
 End Class

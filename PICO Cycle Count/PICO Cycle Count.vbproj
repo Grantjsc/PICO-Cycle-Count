@@ -8,14 +8,14 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>PICO_Cycle_Count.My.MyApplication</StartupObject>
     <RootNamespace>PICO_Cycle_Count</RootNamespace>
-    <AssemblyName>PICO Cycle Count x32</AssemblyName>
+    <AssemblyName>PICO Cycle Count</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>\\btwebdev01\Websites\WindowsAppUpdater\TSG_Shared\PICO Cycle Count %2832bit%29\</PublishUrl>
+    <PublishUrl>\\btwebdev01\Websites\WindowsAppUpdater\TSG_Shared\PICO Cycle Count\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -25,8 +25,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>\\btwebdev01\Websites\WindowsAppUpdater\TSG_Shared\PICO Cycle Count %2832bit%29\</UpdateUrl>
-    <ProductName>PICO Cycle Count x32</ProductName>
+    <UpdateUrl>\\btwebdev01\Websites\WindowsAppUpdater\TSG_Shared\PICO Cycle Count\</UpdateUrl>
+    <ProductName>PICO Cycle Count</ProductName>
     <PublisherName>Littelfuse Philippines %28TSG%29 - GCatapang</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>installer.html</WebPage>
@@ -44,7 +44,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>PICO Cycle Count x32.xml</DocumentationFile>
+    <DocumentationFile>PICO Cycle Count.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -54,7 +54,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>PICO Cycle Count x32.xml</DocumentationFile>
+    <DocumentationFile>PICO Cycle Count.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
