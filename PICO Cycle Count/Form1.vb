@@ -267,18 +267,25 @@ Public Class Form1
                     TotalSpoolWT = CDec(txtSpool.Text) * WTperSpool
 
                     Eq2 = Math.Round((WeightVal - TotalSpoolWT) * Multiplier, 4)
+                    If Eq2 < 0 Then
+                        MsgBox("Weight in grams cannot be lower than spool weight!", MessageBoxIcon.Error)
+                        txtWeight.Text = ""
+                        txtSpool.Text = ""
+                        txtWeight.Focus()
+                    Else
 
-                    'Get_WW()
-                    Record2()
-                    MsgBox("submission completed")
-                    txtSpool.Text = ""
-                    txtSpool.Visible = False
-                    Label5.Visible = False
+                        'Get_WW()
+                        Record2()
+                        MsgBox("submission completed")
+                        txtSpool.Text = ""
+                        txtSpool.Visible = False
+                        Label5.Visible = False
 
-                    txtPartNumber.Text = ""
-                    txtWeight.Text = ""
-                    lblMaterialType.Text = ""
-                    lblValue.Text = ""
+                        txtPartNumber.Text = ""
+                        txtWeight.Text = ""
+                        lblMaterialType.Text = ""
+                        lblValue.Text = ""
+                    End If
                 End If
             Else
                 WeightVal = CDec(txtWeight.Text)
