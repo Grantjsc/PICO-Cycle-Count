@@ -5,6 +5,10 @@ Imports System.Web.UI.WebControls
 Imports OfficeOpenXml
 Imports OfficeOpenXml.Style
 
+' To use Imports  OfficeOpenXml
+' go to Tools > NuGet Package Manager > Package Manager Console.
+' In the Package Manager Console, type " Install-Package EPPlus "
+' then add this "  ExcelPackage.LicenseContext = LicenseContext.NonCommercial " to set the license context
 Public Class Form1
 
     Public ConversionVal As Decimal
